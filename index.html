@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Golden Kernel – Olive Oil | عرض المستثمر</title>
+  <style>
+    :root{
+      --olive:#155e3b; /* أخضر زيتوني داكن */
+      --gold:#c79a23;  /* ذهبي */
+      --ink:#f9fafb;   /* نص فاتح */
+      --bg:#155e3b;    /* الخلفية داكنة */
+      --card:#ffffff15;/* بطاقات شفافة */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0}
+    body{
+      background: var(--bg);
+      color: var(--ink);
+      font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Noto Kufi Arabic", Tahoma, Arial;
+    }
+    .deck{height:100%; scroll-snap-type:y mandatory; overflow-y:auto}
+    section.slide{
+      min-height:100vh; scroll-snap-align:start;
+      display:grid; place-items:center;
+      padding:72px 24px; position:relative
+    }
+    .container{
+      width:min(1100px,100%);
+      background:var(--card);
+      backdrop-filter:saturate(1.2) blur(6px);
+      border:1px solid #ffffff33;
+      border-radius:28px;
+      padding:36px;
+      box-shadow:0 10px 30px #00000066;
+    }
+    h1,h2,h3{margin:0 0 12px 0}
+    h1{font-size:48px; letter-spacing:.2px}
+    h2{font-size:32px}
+    .badge{padding:6px 12px; border-radius:999px;
+      background:linear-gradient(90deg, var(--olive), var(--gold));
+      color:#fff; font-weight:600; display:inline-block}
+    .brand{display:flex; align-items:center; gap:14px}
+    .logo{width:52px; height:52px}
+    .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:18px}
+    .kpi{padding:18px; border:1px solid #ffffff33; border-radius:18px; background:#ffffff22}
+    .kpi b{display:block; font-size:26px; color:var(--gold)}
+    nav.nav{
+      position:fixed; top:4px;
+      left:50%; transform:translateX(-50%);
+      background:#ffffff22; backdrop-filter:blur(10px);
+      border:1px solid #ffffff44;
+      border-radius:999px;
+      padding:6px 10px;
+      display:flex; gap:8px;
+      z-index:10
+    }
+    nav.nav a{color:#fff; text-decoration:none; font-weight:700; padding:6px 12px; border-radius:999px}
+    nav.nav a.active, nav.nav a:hover{background:#ffffff33; color:#fefefe}
+    .progress{position:fixed; top:0; right:0; height:4px; width:0;
+      background:linear-gradient(90deg, var(--gold), #fff); z-index:15}
+    @media (max-width: 860px){
+      .kpis{grid-template-columns:repeat(2,1fr)}
+      h1{font-size:36px} h2{font-size:26px}
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      background: linear-gradient(90deg, var(--olive), var(--gold));
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <nav class="nav" id="nav"></nav>
+  <main class="deck" id="deck">
+    <!-- شريحة الغلاف -->
+    <section class="slide">
+      <div class="container center">
+        <div class="brand">
+          <img class="logo" src="https://i.postimg.cc/WzZ7Qd7C/IMG-20250830-WA0042.jpg" alt="">
+          <h1>Golden Kernel – Olive Oil</h1>
+        </div>
+        <h3>إعداد: يحيى حسين احمد</h3>
+      </div>
+    </section>
+
+    <!-- الرؤية -->
+    <section class="slide"><div class="container">
+      <h2>الرؤية</h2>
+      <p>نحو إنتاج زيت زيتون مصري بريميوم بجودة عالمية وسعر منافس.</p>
+    </div></section>
+
+    <!-- المشكلة -->
+    <section class="slide"><div class="container">
+      <h2>المشكلة</h2>
+      <ul>
+        <li>مصر تُنتج زيتون بكميات ضخمة لكن يُباع خام.</li>
+        <li>قلة مصانع العصر الحديثة خاصة في الصعيد.</li>
+        <li>استيراد منتجات جاهزة بأسعار مرتفعة.</li>
+      </ul>
+    </div></section>
+
+    <!-- الحل -->
+    <section class="slide"><div class="container">
+      <h2>الحل</h2>
+      <p>إنشاء مصنع عصري لاستخلاص زيت الزيتون البكر الممتاز.</p>
+      <p><b>Zero Waste:</b> كل جزء من الزيتون يتحول لمنتج مربح.</p>
+    </div></section>
+
+    <!-- المنتجات -->
+    <section class="slide"><div class="container center">
+      <h2>المنتجات</h2>
+      <a href="products.html" class="btn">عرض المنتجات</a>
+    </div></section>
+
+    <!-- السوق والفرصة -->
+    <section class="slide"><div class="container">
+      <h2>السوق والفرصة</h2>
+      <ul>
+        <li>حجم السوق العالمي: 15 مليار دولار</li>
+        <li>مصر ضمن أكبر 10 دول منتجة للزيتون</li>
+        <li>سعر السوق المحلي: 600–650 جنيه/لتر</li>
+        <li>سعرنا المستهدف: 300 جنيه/لتر</li>
+      </ul>
+    </div></section>
+
+    <!-- النموذج المالي -->
+    <section class="slide"><div class="container">
+      <h2>النموذج المالي</h2>
+      <p>تكلفة الطن: 12,000–15,000 جنيه</p>
+      <p>عائد الطن: 62,500 جنيه</p>
+      <p>صافي الربح: 45,000–50,000 جنيه</p>
+      <p><b>ROI:</b> استرداد رأس المال في سنة تقريبًا</p>
+    </div></section>
+
+    <!-- خطة النمو -->
+    <section class="slide"><div class="container">
+      <h2>خطة النمو</h2>
+      <ul>
+        <li>مرحلة 1: بيع محلي (مطاعم + أسواق)</li>
+        <li>مرحلة 2: تعبئة وBranding</li>
+        <li>مرحلة 3: تصدير (خليج – أوروبا – أمريكا)</li>
+      </ul>
+    </div></section>
+
+    <!-- الأثر الاستراتيجي -->
+    <section class="slide"><div class="container">
+      <h2>الأثر الاستراتيجي</h2>
+      <ul>
+        <li>خلق وظائف جديدة</li>
+        <li>زيادة التصدير</li>
+        <li>رفع قيمة محصول الزيتون المصري</li>
+      </ul>
+    </div></section>
+
+    <!-- الفريق -->
+    <section class="slide"><div class="container">
+      <h2>فريق العمل</h2>
+      <p><b>إسلام محمود</b> – المؤسس والمدير</p>
+    </div></section>
+
+    <!-- الخاتمة -->
+    <section class="slide"><div class="container center">
+      <h2>الخاتمة</h2>
+      <p>استثمر معنا في زيت الزيتون المصري بريميوم</p>
+      <h3>Golden Kernel – Olive Oil</h3>
+    </div></section>
+  </main>
+
+  <script>
+    const deck = document.getElementById("deck");
+    const slides = [...deck.querySelectorAll("section.slide")];
+    const nav = document.getElementById("nav");
+    const progress = document.getElementById("progress");
+
+    slides.forEach((slide,i)=>{
+      const a=document.createElement("a");
+      a.textContent=slide.querySelector("h2,h1")?.textContent || "غلاف";
+      a.href="#";
+      a.onclick=e=>{
+        e.preventDefault();
+        slide.scrollIntoView({behavior:"smooth"});
+      };
+      nav.appendChild(a);
+    });
+
+    deck.addEventListener("scroll",()=>{
+      let ratio=deck.scrollTop/(deck.scrollHeight-window.innerHeight);
+      progress.style.width=(ratio*100)+"%";
+      slides.forEach((s,i)=>{
+        const a=nav.children[i];
+        let rect=s.getBoundingClientRect();
+        if(rect.top<=window.innerHeight/2 && rect.bottom>=window.innerHeight/2){
+          a.classList.add("active");
+        }else a.classList.remove("active");
+      });
+    });
+  </script>
+</body>
+</html>
